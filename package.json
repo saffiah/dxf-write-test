@@ -1,0 +1,30 @@
+{
+  "name": "dxf-writer-test",
+  "version": "0.0.2",
+  "description": "Dead simple 2D DXF writer",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle" : "browserify -r ./src/Drawing.js:Drawing > ./examples/browser/dxf_bundle.js",
+	  "prepublish": "npm run make",
+    "make": "browserify -s drawing ./ > Drawing.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/86simonepenna/js-dxf"
+  },
+  "keywords": [
+    "DXF",
+    "CAD",
+    "AutoCAD"
+  ],
+  "author": "Ognjen Petrovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ognjen-petrovic/js-dxf/issues"
+  },
+  "homepage": "https://github.com/ognjen-petrovic/js-dxf#readme"
+}
